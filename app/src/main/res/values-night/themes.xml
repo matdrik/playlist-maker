@@ -1,7 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Базовая тема приложения. -->
     <style name="Base.Theme.PlaylistMaker" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Основной цвет бренда. -->
+        <item name="colorPrimary">@color/dark_primary</item>
+        <item name="colorPrimaryVariant">@color/dark_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Вторичный цвет бренда. -->
+        <item name="colorSecondary">@color/dark_primary</item>
+        <item name="colorSecondaryVariant">@color/dark_primary</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Цвета фона -->
+        <item name="android:colorBackground">@color/dark_background</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorOnSurface">@color/dark_text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/dark_text_tertiary</item>
+
+        <!-- Цвет строки состояния. -->
+        <item name="android:statusBarColor">@color/dark_primary</item>
     </style>
 </resources>

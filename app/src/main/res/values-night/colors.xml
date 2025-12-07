@@ -3,16 +3,16 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Цвета светлой темы -->
-    <color name="light_background">#FFFFFF</color>
-    <color name="light_surface">#F5F5F5</color>
-    <color name="light_text_primary">#000000</color>
-    <color name="light_text_secondary">#222222</color>
-    <color name="light_text_tertiary">#777777</color>
-    <color name="light_primary">#3772E7</color>
+    <!-- Цвета тёмной темы -->
+    <color name="light_background">#1A1B22</color>
+    <color name="light_surface">#2C2D35</color>
+    <color name="light_text_primary">#FFFFFF</color>
+    <color name="light_text_secondary">#E0E0E0</color>
+    <color name="light_text_tertiary">#999999</color>
+    <color name="light_primary">#1A1B22</color>
     <color name="light_button_text">#1A1B22</color>
 
-    <!-- Цвета тёмной темы -->
+    <!-- Цвета тёмной темы (такие же как светлые для ночного режима) -->
     <color name="dark_background">#1A1B22</color>
     <color name="dark_surface">#2C2D35</color>
     <color name="dark_text_primary">#FFFFFF</color>

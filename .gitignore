@@ -12,6 +12,9 @@
 .externalNativeBuild
 .cxx
 
+.vscode/
+.idea/
+
 # Gradle files
 .gradle/
 build/

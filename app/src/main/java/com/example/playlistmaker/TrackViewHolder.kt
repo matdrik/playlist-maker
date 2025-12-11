@@ -1,13 +1,17 @@
 package com.example.playlistmaker
 
-import android.view.View
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 
-class TrackViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class TrackViewHolder(parent: ViewGroup) :
+        RecyclerView.ViewHolder(
+                LayoutInflater.from(parent.context).inflate(R.layout.track_item, parent, false)
+        ) {
 
     private val trackArtwork: ImageView = itemView.findViewById(R.id.trackArtwork)
     private val trackName: TextView = itemView.findViewById(R.id.trackName)
@@ -19,13 +23,14 @@ class TrackViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         artistName.text = track.artistName
         trackTime.text = track.trackTime
 
-        val cornerRadius = itemView.context.resources.getDimensionPixelSize(R.dimen.track_corner_radius)
+        val cornerRadius =
+                itemView.context.resources.getDimensionPixelSize(R.dimen.track_corner_radius)
 
         Glide.with(itemView)
-            .load(track.artworkUrl100)
-            .placeholder(R.drawable.track_placeholder)
-            .centerCrop()
-            .transform(RoundedCorners(cornerRadius))
-            .into(trackArtwork)
+                .load(track.artworkUrl100)
+                .placeholder(R.drawable.track_placeholder)
+                .centerCrop()
+                .transform(RoundedCorners(cornerRadius))
+                .into(trackArtwork)
     }
 }

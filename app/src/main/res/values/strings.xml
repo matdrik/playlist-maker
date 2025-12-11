@@ -28,4 +28,5 @@
     <!-- Поиск -->
     <string name="search_hint">Поиск</string>
     <string name="clear_search">Очистить поисковый запрос</string>
+    <string name="track_artwork">Обложка трека</string>
 </resources>

@@ -64,4 +64,11 @@
             android:padding="4dp" />
     </LinearLayout>
 
+    <!-- Список треков -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tracksRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false" />
+
 </LinearLayout>

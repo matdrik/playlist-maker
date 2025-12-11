@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Track item dimensions -->
+    <dimen name="track_item_padding">16dp</dimen>
+    <dimen name="track_artwork_size">60dp</dimen>
+    <dimen name="track_artwork_margin_end">16dp</dimen>
+    <dimen name="track_name_text_size">16sp</dimen>
+    <dimen name="track_name_margin_bottom">4dp</dimen>
+    <dimen name="track_artist_text_size">14sp</dimen>
+    <dimen name="track_time_text_size">14sp</dimen>
+    <dimen name="track_time_margin_start">8dp</dimen>
+    <dimen name="track_corner_radius">8dp</dimen>
+</resources>

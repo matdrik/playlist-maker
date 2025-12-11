@@ -12,6 +12,15 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class SearchActivity : AppCompatActivity() {
+
+    private var searchEditText: EditText? = null
+    private var searchText: String = ""
+
+    companion object {
+        const val SEARCH_TEXT_KEY = "SEARCH_TEXT_KEY"
+        const val SEARCH_TEXT_DEFAULT = ""
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
@@ -22,15 +31,21 @@ class SearchActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val searchEditText = findViewById<EditText>(R.id.searchEditText)
+        searchEditText = findViewById<EditText>(R.id.searchEditText)
         val clearButton = findViewById<ImageView>(R.id.clearButton)
+
+        // Восстановление сохраненного текста при пересоздании activity
+        if (savedInstanceState != null) {
+            searchText = savedInstanceState.getString(SEARCH_TEXT_KEY, SEARCH_TEXT_DEFAULT)
+            searchEditText?.setText(searchText)
+        }
 
         // Обработчик кнопки очистки
         clearButton.setOnClickListener {
-            searchEditText.setText("")
+            searchEditText?.setText("")
             // Скрыть клавиатуру
             val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
-            inputMethodManager?.hideSoftInputFromWindow(searchEditText.windowToken, 0)
+            inputMethodManager?.hideSoftInputFromWindow(searchEditText?.windowToken, 0)
         }
 
         // TextWatcher для отслеживания изменений текста
@@ -52,10 +67,25 @@ class SearchActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(s: Editable?) {
-                // Пустая реализация
+                // Сохраняем текст из EditText в переменную
+                searchText = s?.toString() ?: ""
             }
         }
 
-        searchEditText.addTextChangedListener(textWatcher)
+        searchEditText?.addTextChangedListener(textWatcher)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        // Сохраняем текст из EditText в Bundle
+        outState.putString(SEARCH_TEXT_KEY, searchText)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        // Восстанавливаем данные из Bundle
+        searchText = savedInstanceState.getString(SEARCH_TEXT_KEY, SEARCH_TEXT_DEFAULT)
+        // Устанавливаем восстановленные данные обратно в EditText
+        searchEditText?.setText(searchText)
     }
 }

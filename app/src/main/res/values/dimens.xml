@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Track item dimensions -->
+    <!-- Размеры элемента трека -->
     <dimen name="track_item_padding">16dp</dimen>
     <dimen name="track_artwork_size">60dp</dimen>
     <dimen name="track_artwork_margin_end">16dp</dimen>

@@ -2,4 +2,31 @@
 <resources>
     <string name="app_name">Playlist Maker</string>
     <string name="title_hello">Hello, Practicum</string>
+
+    <!-- Главное меню -->
+    <string name="search">Search</string>
+    <string name="library">Library</string>
+    <string name="settings">Settings</string>
+
+    <!-- Настройки -->
+    <string name="settings_title">Settings</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="share_app">Share app</string>
+    <string name="write_to_support">Write to support</string>
+    <string name="user_agreement">User agreement</string>
+
+    <!-- "Поделиться" сообщение -->
+    <string name="share_app_message">Try Playlist Maker - an app for creating playlists!</string>
+
+    <!-- Поддержка -->
+    <string name="support_email">student@example.com</string>
+    <string name="support_email_subject">Message to Playlist Maker developers</string>
+    <string name="support_email_body">It works!!</string>
+
+    <!-- Ссылка на соглашение -->
+    <string name="user_agreement_url">https://vivt.ru/</string>
+
+    <!-- Поиск -->
+    <string name="search_hint">Search</string>
+    <string name="clear_search">Clear search query</string>
 </resources>

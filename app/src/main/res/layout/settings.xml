@@ -25,7 +25,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Настройки"
+            android:text="@string/settings_title"
             android:layout_marginStart="16dp"
             style="@style/HeaderTextStyle" />
     </LinearLayout>
@@ -45,7 +45,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Тёмная тема"
+                android:text="@string/dark_theme"
                 android:layout_centerVertical="true"
                 style="@style/SettingsItemTextStyle" />
 
@@ -59,6 +59,7 @@
 
         <!-- 2 пункт -->
         <RelativeLayout
+            android:id="@+id/shareAppLayout"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             style="@style/SettingsItemLayoutStyle">
@@ -66,7 +67,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Поделиться приложением"
+                android:text="@string/share_app"
                 style="@style/SettingsItemTextStyle" />
 
             <ImageView
@@ -79,6 +80,7 @@
 
         <!-- 2 пункт -->
         <RelativeLayout
+            android:id="@+id/supportLayout"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             style="@style/SettingsItemLayoutStyle">
@@ -86,7 +88,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Написать в поддержку"
+                android:text="@string/write_to_support"
                 style="@style/SettingsItemTextStyle" />
 
             <ImageView
@@ -99,6 +101,7 @@
 
         <!-- 2 пункт -->
         <RelativeLayout
+            android:id="@+id/userAgreementLayout"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             style="@style/SettingsItemLayoutStyle">
@@ -106,7 +109,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Пользовательское соглашение"
+                android:text="@string/user_agreement"
                 style="@style/SettingsItemTextStyle" />
 
             <ImageView

@@ -29,4 +29,6 @@
     <string name="search_hint">Поиск</string>
     <string name="clear_search">Очистить поисковый запрос</string>
     <string name="track_artwork">Обложка трека</string>
+    <string name="search_history_title">История поиска</string>
+    <string name="clear_history">Очистить историю</string>
 </resources>

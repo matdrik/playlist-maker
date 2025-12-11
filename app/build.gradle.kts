@@ -47,6 +47,7 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     implementation(libs.glide)
     kapt(libs.glide.compiler)
+    implementation(libs.gson)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

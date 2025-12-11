@@ -64,6 +64,46 @@
             android:padding="4dp" />
     </LinearLayout>
 
+    <!-- История поиска -->
+    <LinearLayout
+        android:id="@+id/searchHistoryContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/searchHistoryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/search_history_title"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/ys_text_medium" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchHistoryRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false" />
+
+        <Button
+            android:id="@+id/clearHistoryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_history"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="start"
+            style="@style/Widget.Material3.Button.TextButton" />
+    </LinearLayout>
+
     <!-- Список треков -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tracksRecyclerView"

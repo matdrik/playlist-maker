@@ -2,28 +2,28 @@
 <resources>
     <!-- Стиль для контейнера главного экрана -->
     <style name="MainContainerStyle">
-        <item name="android:backgroundTint">@color/light_primary</item>
+        <item name="android:backgroundTint">@color/yp_white</item>
     </style>
 
     <!-- Стиль для кнопок главного экрана -->
     <style name="MainButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
-        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:backgroundTint">@color/yp_white</item>
         <item name="android:drawablePadding">12dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/light_button_text</item>
+        <item name="android:textColor">@color/yp_black</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">false</item>
         <item name="cornerRadius">16sp</item>
         <item name="iconGravity">textStart</item>
         <item name="iconSize">24sp</item>
-        <item name="iconTint">@color/light_button_text</item>
+        <item name="iconTint">@color/yp_black</item>
         <item name="android:fontFamily">@font/ys_display_medium</item>
     </style>
 
     <!-- Стиль для текста заголовка приложения -->
     <style name="AppTitleTextStyle">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/yp_white</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">22sp</item>
         <item name="android:fontFamily">@font/ys_display_medium</item>
@@ -69,6 +69,187 @@
 
     <!-- Стиль для иконки настроек -->
     <style name="SettingsIconStyle">
-        <item name="android:tint">@color/light_text_tertiary</item>
+        <item name="android:tint">@color/yp_text_gray</item>
+    </style>
+
+    <!-- ============================================ -->
+    <!-- ТЕКСТОВЫЕ СТИЛИ -->
+    <!-- ============================================ -->
+
+    <!-- Основной текст -->
+    <style name="BodyTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:fontFamily">@font/ys_text_regular</item>
+    </style>
+
+    <!-- Основной текст (жирный) -->
+    <style name="BodyTextBoldStyle" parent="BodyTextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Основной текст (средний) -->
+    <style name="BodyTextMediumStyle" parent="BodyTextStyle">
+        <item name="android:fontFamily">@font/ys_text_medium</item>
+    </style>
+
+    <!-- Вторичный текст -->
+    <style name="SecondaryTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:fontFamily">@font/ys_text_regular</item>
+    </style>
+
+    <!-- Текст вопроса (для activity_main) -->
+    <style name="QuestionTextStyle">
+        <item name="android:textSize">23sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/yp_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+    </style>
+
+    <!-- Текст метки -->
+    <style name="LabelTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/yp_white</item>
+        <item name="android:fontFamily">@font/ys_text_regular</item>
+    </style>
+
+    <!-- Название трека -->
+    <style name="TrackNameTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/light_text_primary</item>
+<!--        <item name="android:textColor">?attr/colorOnSurface</item>-->
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/ys_text_regular</item>
+    </style>
+
+    <!-- Имя артиста -->
+    <style name="TrackArtistTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/light_text_tertiary</item>
+<!--        <item name="android:textColor">?attr/colorOnSurface</item>-->
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/ys_text_regular</item>
+    </style>
+
+    <!-- Время трека -->
+    <style name="TrackTimeTextStyle">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/light_text_tertiary</item>
+        <item name="android:fontFamily">@font/ys_text_regular</item>
+    </style>
+
+    <!-- Заголовок истории поиска -->
+    <style name="SearchHistoryTitleStyle">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:fontFamily">@font/ys_text_medium</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <!-- ============================================ -->
+    <!-- КНОПКИ -->
+    <!-- ============================================ -->
+
+    <!-- Кнопка действия (Да/Нет) -->
+    <style name="ActionButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/yp_white</item>
+        <item name="android:textColor">@color/yp_black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+    </style>
+
+    <!-- Текстовая кнопка -->
+    <style name="TextButtonStyle" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/ys_text_medium</item>
+    </style>
+
+    <!-- Темная кнопка (для кнопки очистки истории) -->
+    <style name="DarkButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/yp_black</item>
+        <item name="android:textColor">@color/yp_white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="cornerRadius">120dp</item>
+        <item name="android:fontFamily">@font/ys_text_medium</item>
+    </style>
+
+    <!-- ============================================ -->
+    <!-- ПОЛЯ ВВОДА -->
+    <!-- ============================================ -->
+
+    <!-- Поле поиска -->
+    <style name="SearchEditTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textColorHint">?attr/colorOnSurfaceVariant</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">@font/ys_text_regular</item>
+    </style>
+
+    <!-- ============================================ -->
+    <!-- ИКОНКИ -->
+    <!-- ============================================ -->
+
+    <!-- Базовый стиль иконки -->
+    <style name="IconStyle">
+        <item name="android:tint">?attr/colorOnSurface</item>
+    </style>
+
+    <!-- Маленькая иконка -->
+    <style name="SmallIconStyle" parent="IconStyle">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+
+    <!-- Средняя иконка -->
+    <style name="MediumIconStyle" parent="IconStyle">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+    </style>
+
+    <!-- Иконка с серым цветом -->
+    <style name="IconGrayStyle">
+        <item name="android:tint">@color/yp_text_gray</item>
+    </style>
+
+    <!-- ============================================ -->
+    <!-- КОНТЕЙНЕРЫ -->
+    <!-- ============================================ -->
+
+    <!-- Контейнер поиска -->
+    <style name="SearchContainerStyle">
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- Стиль карточки -->
+    <style name="CardStyle">
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- Контейнер элемента списка -->
+    <style name="ListItemContainerStyle">
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
     </style>
 </resources>

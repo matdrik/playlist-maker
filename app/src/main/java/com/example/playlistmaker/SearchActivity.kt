@@ -71,6 +71,15 @@ class SearchActivity : AppCompatActivity() {
         if (savedInstanceState != null) {
             searchText = savedInstanceState.getString(SEARCH_TEXT_KEY, SEARCH_TEXT_DEFAULT)
             searchEditText?.setText(searchText)
+            // Обновляем видимость иконки очистки при восстановлении состояния
+            clearButton.visibility = if (searchText.isEmpty()) {
+                android.view.View.GONE
+            } else {
+                android.view.View.VISIBLE
+            }
+        } else {
+            // Инициализация: скрываем иконку, если поле пустое
+            clearButton.visibility = android.view.View.GONE
         }
 
         // Обработчик кнопки очистки
@@ -132,7 +141,7 @@ class SearchActivity : AppCompatActivity() {
                 trackName = "Billie Jean",
                 artistName = "Michael Jackson",
                 trackTime = "4:35",
-                artworkUrl100 = "https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/3d/9d/38/3d9d3811-71f0-3a0e-1ada-3004e56ff852/827969428726.jpg/100x100bb.jpg"
+                artworkUrl100 = ""
             ))
             add(Track(
                 trackId = 3,

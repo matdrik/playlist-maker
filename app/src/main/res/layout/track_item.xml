@@ -14,7 +14,7 @@
         android:scaleType="centerCrop"
         android:contentDescription="@string/track_artwork"
         android:layout_marginEnd="@dimen/track_artwork_margin_end"
-        android:background="@drawable/track_placeholder" />
+        android:background="@drawable/placeholder" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -27,33 +27,22 @@
             android:id="@+id/trackName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="@dimen/track_name_text_size"
-            android:textColor="?attr/colorOnSurface"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:fontFamily="@font/ys_text_medium"
-            android:layout_marginBottom="@dimen/track_name_margin_bottom" />
+            android:layout_marginBottom="@dimen/track_name_margin_bottom"
+            style="@style/TrackNameTextStyle" />
 
         <TextView
             android:id="@+id/artistName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/track_artist_text_size"
-            android:textColor="?attr/colorOnSurface"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:fontFamily="@font/ys_text_regular" />
+            style="@style/TrackArtistTextStyle" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/trackTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/track_time_text_size"
-        android:textColor="?attr/colorOnSurface"
-        android:layout_gravity="center_vertical"
-        android:layout_marginStart="@dimen/track_time_margin_start"
-        android:fontFamily="@font/ys_text_regular" />
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/arrow_right"
+        android:contentDescription="@string/track_artwork"
+        android:layout_marginStart="8dp"
+        android:layout_gravity="center_vertical" />
 
 </LinearLayout>

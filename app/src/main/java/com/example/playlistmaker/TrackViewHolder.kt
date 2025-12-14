@@ -16,12 +16,10 @@ class TrackViewHolder(parent: ViewGroup) :
     private val trackArtwork: ImageView = itemView.findViewById(R.id.trackArtwork)
     private val trackName: TextView = itemView.findViewById(R.id.trackName)
     private val artistName: TextView = itemView.findViewById(R.id.artistName)
-    private val trackTime: TextView = itemView.findViewById(R.id.trackTime)
 
     fun bind(track: Track) {
         trackName.text = track.trackName
-        artistName.text = track.artistName
-        trackTime.text = track.trackTime
+        artistName.text = "${track.artistName} • ${track.trackTime}"
 
         val cornerRadius =
                 itemView.context.resources.getDimensionPixelSize(R.dimen.track_corner_radius)
